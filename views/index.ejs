@@ -22,45 +22,17 @@
     
     <% } else { %>
 
-      <% if (choice === "chicken") { %>
-      
-          <h2> <%=data[0].name %> </h2>
+          <h2> <%=data[choice].name %> </h2>
           <h3>Ingredients:</h3>
           <ul id="ingredientsList">
-            <li> <%=data[0].ingredients.protein.name %>, <%=data[0].ingredients.protein.preparation %></li>
-            <li> <%= data[0].ingredients.salsa.name %> </li>
-            <% data[0].ingredients.toppings.forEach(item => { %>
+            <li> <%=data[choice].ingredients.protein.name %>, <%=data[choice].ingredients.protein.preparation %></li>
+            <li> <%= data[choice].ingredients.salsa.name %> </li>
+            <% data[choice].ingredients.toppings.forEach(item => { %>
               <li> <%= item.quantity %> of <%= item.name %> </li>
             <% }) %>
           </ul>
-
-      <% } else if (choice === "beef") { %>
-      
-          <h2> <%=data[1].name %> </h2>
-          <h3>Ingredients:</h3>
-          <ul id="ingredientsList">
-            <li> <%=data[1].ingredients.protein.name %>, <%=data[1].ingredients.protein.preparation %></li>
-            <li> <%= data[1].ingredients.salsa.name %> </li>
-            <% data[1].ingredients.toppings.forEach(item => { %>
-              <li> <%= item.quantity %> of <%= item.name %> </li>
-            <% }) %>
-          </ul>
-
-      <% } else if (choice === "fish") { %>
-      
-          <h2> <%=data[2].name %> </h2>
-          <h3>Ingredients:</h3>
-          <ul id="ingredientsList">
-            <li> <%=data[2].ingredients.protein.name %>, <%=data[2].ingredients.protein.preparation %></li>
-            <li> <%= data[2].ingredients.salsa.name %> </li>
-            <% data[2].ingredients.toppings.forEach(item => { %>
-              <li> <%= item.quantity %> of <%= item.name %> </li>
-            <% }) %>
-          </ul>
-
-      <% } %>
-    
-      <% } %>
+       
+    <% } %>
 
 
 
